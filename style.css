@@ -105,34 +105,44 @@ body {
   font-size: clamp(24px, 5vw, 36px);
   font-weight: 500;
   color: var(--glow-warm);
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   animation-delay: 0.5s;
 }
 
 .line-2 {
+  font-family: var(--font-hand);
+  font-size: clamp(22px, 5vw, 32px);
+  font-weight: 600;
+  color: var(--glow-pink);
+  margin-bottom: 18px;
+  animation-delay: 1.4s;
+  text-shadow: 0 0 10px rgba(255, 107, 157, 0.3);
+}
+
+.line-3 {
   font-family: var(--font-main);
-  font-size: clamp(28px, 6vw, 48px);
+  font-size: clamp(28px, 6vw, 46px);
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 16px;
-  animation-delay: 1.4s;
+  animation-delay: 2.5s;
   background: linear-gradient(135deg, var(--glow-pink), var(--glow-purple), var(--glow-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.line-3 {
+.line-4 {
   font-family: var(--font-main);
   font-size: clamp(14px, 3vw, 18px);
   font-weight: 400;
   color: var(--text-soft);
   margin-bottom: 36px;
-  animation-delay: 2.6s;
+  animation-delay: 3.6s;
 }
 
-.line-4 {
-  animation-delay: 3.4s;
+.line-5 {
+  animation-delay: 4.4s;
 }
 
 @keyframes revealLine {
