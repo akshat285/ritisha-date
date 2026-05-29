@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Ritisha 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Starry Sky Canvas -->
+  <canvas id="sky-canvas"></canvas>
+
+  <!-- Background Audio: Streamed royalty-free retro funk (Funky One by Kevin MacLeod) -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/Funky%20One.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ====== SCREEN 1: THE ASK ====== -->
+  <section id="screen-ask" class="screen active">
+    <div class="ask-content">
+      <div class="moon-glow"></div>
+      <p class="typewriter-line line-1">Hey Ritisha...</p>
+      <h1 class="typewriter-line line-2">Will you go on a date with me?</h1>
+      <p class="typewriter-line line-3">Say yes and I promise you the best time ever 👉👈</p>
+
+      <div class="button-row typewriter-line line-4">
+        <button id="btn-yes" class="btn-glow">Yes! 💖</button>
+        <button id="btn-no" class="btn-ghost">No 😢</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SCREEN 2: CHOOSE DATE ====== -->
+  <section id="screen-pick" class="screen">
+    <div class="pick-content">
+      <h2 class="fade-in">I knew you'd say yes! 🥹</h2>
+      <p class="fade-in sub">Now pick what we're doing...</p>
+
+      <div class="options-row fade-in">
+        <button class="option-pill" data-option="Movie Night 🎬">
+          <span class="pill-icon">🎬</span>
+          <span>Movie Night</span>
+        </button>
+        <button class="option-pill" data-option="Game Night 🎮">
+          <span class="pill-icon">🎮</span>
+          <span>Game Night</span>
+        </button>
+        <button class="option-pill" data-option="Something else ✨">
+          <span class="pill-icon">✨</span>
+          <span>Something else</span>
+        </button>
+      </div>
+
+      <div id="custom-input-wrap" class="fade-in hidden">
+        <input type="text" id="custom-input" placeholder="Tell me your idea..." maxlength="40">
+      </div>
+
+      <div class="when-section fade-in">
+        <label for="date-picker">When? 🗓️</label>
+        <input type="datetime-local" id="date-picker">
+      </div>
+
+      <button id="btn-lock" class="btn-glow" disabled>Lock it in 🔒</button>
+    </div>
+  </section>
+
+  <!-- ====== SCREEN 3: COUNTDOWN ====== -->
+  <section id="screen-countdown" class="screen">
+    <div class="countdown-content">
+      <h2 class="fade-in">It's a date! 🎉</h2>
+      <p class="fade-in sub" id="date-summary">Movie Night 🎬 — Saturday, May 31</p>
+
+      <div class="timer fade-in">
+        <div class="time-unit">
+          <span id="t-days" class="time-num">00</span>
+          <span class="time-label">days</span>
+        </div>
+        <span class="time-colon">:</span>
+        <div class="time-unit">
+          <span id="t-hours" class="time-num">00</span>
+          <span class="time-label">hours</span>
+        </div>
+        <span class="time-colon">:</span>
+        <div class="time-unit">
+          <span id="t-mins" class="time-num">00</span>
+          <span class="time-label">mins</span>
+        </div>
+        <span class="time-colon">:</span>
+        <div class="time-unit">
+          <span id="t-secs" class="time-num">00</span>
+          <span class="time-label">secs</span>
+        </div>
+      </div>
+
+      <!-- Mini Music Player -->
+      <div class="mini-player fade-in">
+        <button id="btn-play" class="play-btn" aria-label="Play music">
+          <svg id="icon-play" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          <svg id="icon-pause" class="hidden" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+        </button>
+        <div class="player-info">
+          <span class="p-title">Funky One 🎵</span>
+        </div>
+        <input type="range" id="vol" min="0" max="1" step="0.05" value="0.5" class="vol-slider">
+      </div>
+
+      <div class="action-row fade-in">
+        <button id="btn-cal" class="btn-outline">📅 Add to Calendar</button>
+        <button id="btn-share" class="btn-outline">💌 Copy Invite</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
